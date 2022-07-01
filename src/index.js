@@ -6,18 +6,29 @@ import MoneyService from './js/money-service.js';
 
 function getMoney(response) {
   if (response) {
-    console.log(response);
-    $('.showRate').text(`${response.conversion_rates.USD}`);
+    let exchangeRate = `${1/response.conversion_rates.USD}`;
+    return exchangeRate;
   } else {
-    $('.showErrors').text(`There was an error: ${response}`);
+    $('.showErrors').text(`There was an error: ${response.error_message}`);
   }
 }
+
+// function usMoney(exchangeRate, dollars) {
+//   let foreignMoney = exchangeRate * dollars;
+//   console.log(foreignMoney);
+//   return foreignMoney;
+// }
+
+
 $(document).ready(function () {
   $('#submit-btn').click(function () {
     let currency = $('#convert-to').val();
-    console.log(currency);
-    MoneyService.getExchange(currency).then(function (response) {
-      getMoney(response);
+   // let dollars = $('#amount-usd').val();
+    MoneyService.getExchange(currency)
+    .then(function (response) {
+      let exchangeRate = getMoney(response);
+      console.log(exchangeRate);
     });
+   
   });
 });
