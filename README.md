@@ -18,7 +18,7 @@
 * _Clone from [github](https://github.com/lcmpbll/currency-converter)_
 * _open top level of your repository_
 * _In the terminal enter npm install and then npm run build_
-* _Obtain an API key from [API](https://www.exchangerate-api.com/), by entering your email and creating an account _
+* _Obtain an API key from [API](https://www.exchangerate-api.com/), by entering your email and creating an account._
 * _Create a .env file to and set your API key equal to API_KEY_
 * _Enter npm run start into your terminal._
 
