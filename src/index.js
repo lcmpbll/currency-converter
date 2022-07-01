@@ -25,7 +25,7 @@ function currencyVailidator (foreignMoney) {
   if (isNaN(foreignMoney)) {
     $('.showExchange').hide();
     $('.showRate').hide();
-    $('.errorMessage').text(`We are not familiar with that currency or format. Please reenter in the format of three uppercase letters, like so : USD`)
+    $('.errorMessage').text(`We are not familiar with that currency or format. Please re-enter in the format of three uppercase letters, like so : USD`)
     $('.errorMessage').show();
     $('.showErrors').show();
   }
@@ -43,7 +43,7 @@ $(document).ready(function () {
       let exchangeRate = getMoney(response);
       let foreignMoney = usMoney(exchangeRate);
       $('.showExchange').text("You have " + foreignMoney.toFixed(2) + " in " + currency)
-      $('.showRate').text("The echange rate is : " + exchangeRate + " for " + currency)
+      $('.showRate').text("The exchange rate is : " + exchangeRate + " for " + currency)
       
     });
    
