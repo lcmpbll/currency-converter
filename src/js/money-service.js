@@ -18,11 +18,11 @@ export default class MoneyService {
     .then (function(response) {
       if (!response.ok) {
         throw Error(response);
-      }
+      } 
       return response.json();
     })
-    .catch(function(error) {
-      return error;
+    .catch(function(response) {
+      return response;
     })
     
   }
