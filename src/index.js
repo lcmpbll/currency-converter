@@ -1,23 +1,24 @@
-
-// import $ from 'jquery';
+import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import MoneyService from './js/money-service.js'
+import MoneyService from './js/money-service.js';
 
-function getMoney (response) {
-  if(response.conversion_rates) {
-    $('.showRate').text(`${response.conversion_rates.AUD}`);
+function getMoney(response) {
+  if (response) {
+    console.log(response);
+    $('.showRate').text(`${response.conversion_rates.USD}`);
   } else {
-    $('.showErrors').text(`There was an error: ${response.error_type}`;)
+    $('.showErrors').text(`There was an error: ${response.error_type}`);
   }
 }
 $(document).ready(function () {
-  $('#submit-btn').submit(function (event) {
-    event.preventDefault(); 
-    MoneyService.getExchange();
-      .then(function(response) {
-        getMoney(response);
-      });
+  $('#submit-btn').click(function () {
+    let currency = ('#convert-to').val();
+    $('.showErrors').text(`There was an error:`);
+    console.log(currency);
+    MoneyService.getExchange(currency).then(function (response) {
+      getMoney(response);
+    });
   });
 });
