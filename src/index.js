@@ -14,7 +14,6 @@ import MoneyService from './js/money-service.js';
 function getMoney(response) {
   if (response) {
     let exchangeRate = `${1/response.conversion_rates.USD}`;
-    console.log(exchangeRate);
     return exchangeRate;
   } else {
     $('.showErrors').text(`There was an error: ${response.error}`);
@@ -33,22 +32,23 @@ function getMoney(response) {
 
 
 
-// function usMoney(exchangeRate, dollars) {
-//   let foreignMoney = exchangeRate * dollars;
-//   console.log(foreignMoney);
-//   return foreignMoney;
-// }
+function usMoney(exchangeRate) {
+  let dollars = $('#amount-usd').val();
+  let foreignMoney = exchangeRate * dollars;
+  console.log(foreignMoney);
+  return foreignMoney;
+}
 
 
 $(document).ready(function () {
   $('#submit').click(function () {
     let currency = $('#convert-to').val();
-    //let dollars = $('#amount-usd').val();
     MoneyService.getExchange(currency)
     .then(function (response) {
-      getMoney(response);
-      //console.log(exchangeRate)
-
+      let exchangeRate = getMoney(response);
+      usMoney(exchangeRate);
+      
+     
     });
    
   });
