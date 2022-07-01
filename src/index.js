@@ -14,7 +14,7 @@ function getMoney(response) {
 }
 $(document).ready(function () {
   $('#submit-btn').click(function () {
-    let currency = ('#convert-to').val();
+    let currency = $('#convert-to').val();
     $('.showErrors').text(`There was an error:`);
     console.log(currency);
     MoneyService.getExchange(currency).then(function (response) {
