@@ -13,8 +13,8 @@
 // }
 
 export default class MoneyService {
-  static getExchange() {
-    return fetch(`https://v6.exchangerate-api.com/v6/{process.env.API_KEY}/latest/USD`)
+  static getExchange(currency) {
+    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${currency}`)
     .then (function(response) {
       if (!response.ok) {
         throw Error(response);
