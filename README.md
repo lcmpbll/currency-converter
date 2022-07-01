@@ -1,8 +1,8 @@
-# (Application Name)
+# Currency Converter
 
-#### (Brief Description of Application)
+#### Converts USD to different currencies using the current exchange rate
 
-#### By (Your Name Here)
+#### By Liam Campbell
 
 ## Technologies Used
 
@@ -15,11 +15,12 @@
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _Clone from [github] ()_
+* _open top level of your repository_
+* _In the terminal enter npm install and then npm run build_
+* _Obtain an API key from [API] (https://www.exchangerate-api.com/), by entering your email and creating an account _
+* _Create a .env file to and set your API key equal to API_KEY_
+* _Enter npm run start into your terminal._
 
 * run $npm install to install dependencies
 * run $ npm install dotenv-webpack@2.0.0 --save-dev
@@ -29,6 +30,8 @@
 * _Any known issues_
 * _should go here_
 
-## License
+# License 
 
-## Contact Information
+_Feel free to reach out via github with any questions or comments_
+
+[Copyright](LICENSE) (c) _7-1-2022_ _Liam Campbell_
