@@ -15,7 +15,7 @@
 
 ## Setup/Installation Requirements
 
-* _Clone from [github] ()_
+* _Clone from [github] (https://github.com/lcmpbll/currency-converter)_
 * _open top level of your repository_
 * _In the terminal enter npm install and then npm run build_
 * _Obtain an API key from [API] (https://www.exchangerate-api.com/), by entering your email and creating an account _
