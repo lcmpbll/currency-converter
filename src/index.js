@@ -35,7 +35,6 @@ function getMoney(response) {
 function usMoney(exchangeRate) {
   let dollars = $('#amount-usd').val();
   let foreignMoney = exchangeRate * dollars;
-  console.log(foreignMoney);
   return foreignMoney;
 }
 
@@ -46,9 +45,9 @@ $(document).ready(function () {
     MoneyService.getExchange(currency)
     .then(function (response) {
       let exchangeRate = getMoney(response);
-      usMoney(exchangeRate);
-      
-     
+      let foreignMoney = usMoney(exchangeRate);
+      $('.showExchange').text("You have " + foreignMoney.toFixed(2) + " in " + currency)
+      $('.showRate').text("The echange rate is : " + exchangeRate + " for " + currency)
     });
    
   });
