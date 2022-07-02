@@ -1,3 +1,19 @@
 body {
-  background-color:aquamarine;
+  background-color: rgb(52, 141, 166);
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.container {
+  float: center;
+}
+
+#convert-to{
+  margin: 20px;
+}
+
+#amount-usd {
+  margin: 20px;
 }
