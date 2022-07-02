@@ -6,10 +6,10 @@
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _Javascript_
+* _Exchange Rate API_
+* _Jquery_
+* _HTML_
 
 ## Description
 
@@ -22,13 +22,10 @@
 * _Create a .env file to and set your API key equal to API_KEY_
 * _Enter npm run start into your terminal._
 
-* run $npm install to install dependencies
-* run $ npm install dotenv-webpack@2.0.0 --save-dev
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _None_
 
 # License 
 
