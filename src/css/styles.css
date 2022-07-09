@@ -1,13 +1,37 @@
 body {
-  background-color: rgb(52, 141, 166);
+  background-color: rgba(41, 153, 184, 0.767);
 }
 
 .jumbotron {
   text-align: center;
+  text-shadow: 10px;
+  font-weight: 500;
+}
+
+.jumbotron h1 {
+  background-image: repeating-linear-gradient(to left, violet, indigo, blue, green, gold, orange, red );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 100px;
+  stroke: black;
+  
+}
+
+.raido {
+  display: block;
+  display: inline;
+  text-align: right;
+  padding: 10px;
+  margin: 10px;
+
 }
 
 .container {
-  float: center;
+  margin: auto;
+  margin-left: 250px;
+  box-sizing: border-box;
+  position: fixed;
 }
 
 #convert-to{
@@ -17,3 +41,36 @@ body {
 #amount-usd {
   margin: 20px;
 }
+
+.inputForm {
+  border: 2px solid black;
+  margin: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+
+.sidebar {
+  float: left;
+  border: 10px solid black;
+  width: 200px;
+  height: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  position: fixed;
+
+}
+
+.showRate {
+  font-size: xx-large;
+
+}
+
+.showExchange {
+  font-size: xx-large;
+}
+
+.convertCurrency{
+  display: none;
+}
+
