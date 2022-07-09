@@ -3,4 +3,5 @@ dist/
 coverage/
 package-lock.json/
 .env
-src/js/exampleFunction.js
+src/js/exampleFunction.js/
+.vscode
