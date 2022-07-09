@@ -9,8 +9,9 @@ function getMoney(response) {
     let exchangeRate = `${response.conversion_rates.USD}`;
     return exchangeRate;
   } else {
-    $('.showErrors').text(`There was an error: ${response.error}`);
+    $('.showErrors').text(`There was an error: ${response}`);
     $('.showErrors').show();
+    $('.errorMessage').hide();
     console.log(response);
   }
 }
@@ -38,6 +39,8 @@ function currencyVailidator (foreignMoney) {
   if (isNaN(foreignMoney)) {
     $('.showExchange').hide();
     $('.showRate').hide();
+    $('.showExchangeOther').hide();
+    $('.showRateOther').hide();
     $('.errorMessage').text(`We are not familiar with that currency or format. Please re-enter in the format of three uppercase letters, like so : USD`);
     $('.errorMessage').show();
     
