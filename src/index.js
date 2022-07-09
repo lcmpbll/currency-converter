@@ -16,7 +16,6 @@ function getMoney(response) {
 }
 
 function Money(exchangeRate, whichWay) {
-  console.log(whichWay);
   let dollars = $('#amount-of-money').val();
   if (whichWay === "USD") {
     let foreignMoney = (1/exchangeRate) * dollars;

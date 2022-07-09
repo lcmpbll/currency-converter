@@ -72,6 +72,15 @@ body {
   font-size: xx-large;
 }
 
+.showRateOther {
+  font-size: xx-large;
+
+}
+
+.showExchangeOther {
+  font-size: xx-large;
+}
+
 .convertCurrency{
   display: none;
 }
