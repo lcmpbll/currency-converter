@@ -24,13 +24,8 @@
   <div class="container">
     <div class="inputForm">
       <div class="convertUSD">
-        <label>Enter a currency to convert your USD to:</label>
-        <input id="convert-to" type="text">
-      </div>
-      <div class="convertCurrency">
-        <label>Enter a currency to convert to USD:</label>
-        <input id="convert-to-usd" type="text">
-        <br>
+        <label>Enter a currency to convert: </label>
+        <input id="convert-to" type="text" required>
       </div>
       <br>
       <br>
@@ -42,18 +37,20 @@
       <br>
       <br>
       <label class="radio">
-        <input type="radio" name="convertOther" value="other">
-        Convert a different currency to USD
+        <input type="radio" name="whichWay" value="other">
+        Convert to USD
       </label>
       <label class="radio">
-        <input type="radio" name="convertUSD" value="USD" checked>
-        Convery your currency to USD.
+        <input type="radio" name="whichWay" value="USD" checked>
+        Convert from USD
       </label>
     </div>
   <br>
   <br>
   <div class="showRate"></div>
   <div class="showExchange"></div>
+  <div class="showRateOther"></div>
+  <div class="showExchangeOther"></div>
   <div class="showErrors"></div>
   <div class="errorMessage"></div>
 </div>
