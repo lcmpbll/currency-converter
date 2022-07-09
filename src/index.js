@@ -61,6 +61,6 @@ $(document).ready(function () {
         $('.showRateOther').text("The exchange rate is : " + exchangeRate + " for USD");
       
       });
-   
+      
   });
 });
