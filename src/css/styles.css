@@ -19,12 +19,14 @@ body {
 }
 
 .raido {
-  display: block;
-  display: inline;
+  display: grid;
+  grid-template-columns: 2em auto;
+  gap: 30px;
   text-align: right;
   padding: 10px;
   margin: 10px;
-
+  box-sizing: border-box;
+ 
 }
 
 .container {

@@ -6,21 +6,56 @@
     </head>
 <body>
   <div class="jumbotron">
-    <h1>Money Rates</h1>
-
+    <h1>Money Exchange Rates</h1>
+  </div>
+  <div class="sidebar">
+    <h4>List of currencies:</h4>
+    <ul>
+      <li>AUD</li>
+      <li>BGN</li>
+      <li>CAD</li>
+      <li>CHF</li>
+      <li>EGP</li>
+      <li>EUR</li>
+      <li>GBO</li>
+      <li>and more</li>
+    </ul>
   </div>
   <div class="container">
-    <label>Enter a currency to convert your USD to:</label>
-    <input id="convert-to" type="text">
-    <br>
-    <label>Enter amount USD:</label>
-    <input id="amount-usd" type="number">
-    <br>
-    <button class="btn-secondary" id="submit">Get Rate</button>
-  </div>
+    <div class="inputForm">
+      <div class="convertUSD">
+        <label>Enter a currency to convert your USD to:</label>
+        <input id="convert-to" type="text">
+      </div>
+      <div class="convertCurrency">
+        <label>Enter a currency to convert to USD:</label>
+        <input id="convert-to-usd" type="text">
+        <br>
+      </div>
+      <br>
+      <br>
+      <label>Enter amount to convert:</label>
+      <input id="amount-of-money" type="number">
+      <br>
+      <br>
+      <button class="btn-secondary" id="submit">Get Rate</button>
+      <br>
+      <br>
+      <label class="radio">
+        <input type="radio" name="convertOther" value="other">
+        Convert a different currency to USD
+      </label>
+      <label class="radio">
+        <input type="radio" name="convertUSD" value="USD" checked>
+        Convery your currency to USD.
+      </label>
+    </div>
+  <br>
+  <br>
   <div class="showRate"></div>
   <div class="showExchange"></div>
   <div class="showErrors"></div>
   <div class="errorMessage"></div>
+</div>
 </body>
 </html>
